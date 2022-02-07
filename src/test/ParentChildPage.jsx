@@ -1,6 +1,6 @@
 import React, { useState, useEffect, memo } from "react";
 import Child from "./Child";
-import './Child.css';
+import "./Child.css";
 
 export default () => {
   const [count, setCount] = useState(0);
@@ -16,12 +16,10 @@ export default () => {
     console.log(`You clicked ${count} times`);
   }, [count]);
 
-
   return (
     <div style={{ flex: 1 }}>
       <button onClick={() => setCount(count + 1)}> Click me</button>
-      <Child className="Child"/>
+      <Child className="Child" />
     </div>
   );
 };
-
