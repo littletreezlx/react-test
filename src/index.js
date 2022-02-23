@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import SetStatePage from "./test/SetStatePage";
 import UseEffectTestPage from "./test/UseEffectTestPage";
 import ParentChildPage from "./test/ParentChildPage";
+import HocTestPage from "./test/hoc/HocTestPage";
 
 const callback = (id, phase, actualTime, baseTime, startTime, commitTime) => {
   let renderTime = commitTime - startTime;
@@ -21,9 +22,11 @@ ReactDOM.render(
   <React.StrictMode>
     {/* <SetStatePage /> */}
     {/* <UseEffectTestPage /> */}
-    <Profiler id="Movies" onRender={callback}>
+    {/* <Profiler id="Movies" onRender={callback}>
       <ParentChildPage />
-    </Profiler>
+    </Profiler> */}
+
+    <HocTestPage/>
   </React.StrictMode>,
   document.getElementById("root")
 );
